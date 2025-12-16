@@ -1,9 +1,9 @@
 $(document).ready(function() {
 	$(window).scroll(function() {
-	if ($(this).scrollTop() > 200 ) {
+	if ($(this).scrollTop() > 50 ) {
 	  $('.main_bg').css('opacity', 1);
 	} else {
-	  $('.main_bg').css('opacity', 0.00);
+	  $('.main_bg').css('opacity', 0);
 	}
 	});
 });

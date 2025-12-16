@@ -432,21 +432,21 @@ a.totop span {
     letter-spacing: 0.2em;
     font-size: 0.2em;
 }
-}
 
 /* main */ 
 .main_bg{
     position: fixed;
+    inset: 0;
     background-image: url(img/main_bg4.png);
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;
-    z-index: -999;
+    z-index: -1;
+    opacity: 0;
     transition: 0.3s;
+    pointer-events: none;
 }
-
-
 
 .main_bg_sub{
     position: fixed;
@@ -458,8 +458,6 @@ a.totop span {
     z-index: -999;
     transition: 0.3s;
 }
-
-
 a {
     margin:0;
     padding:0;
@@ -766,7 +764,11 @@ header {
 /* ------------------------------------ */
 /* トップページ */
 /* ------------------------------------ */
-
+/* 本文だけ前面に出す */
+.wrapper{
+  position: relative;
+  z-index: 1;
+}
 .wrapper #main {
     position: relative;
     display: block;
@@ -813,6 +815,8 @@ header {
 
 /* フッター */
 footer {
+    z-index: 2;
+    position: relative;
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
@@ -1206,7 +1210,7 @@ footer {
         background-position: center;
         width: 100vw;
         height: 100vh;
-        z-index: -999;
+        z-index: -1;
         transition: 0.3s;
     }
     .main_bg_sub{
